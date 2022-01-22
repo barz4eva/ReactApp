@@ -1,6 +1,7 @@
 import { Alert } from "react-bootstrap";
 import React from "react";
 
+
 class ClassComponent extends React.Component{
 
     constructor(props) {
