@@ -16,10 +16,16 @@ function App() {
       <ClassComponent/>
       <ClassComponent/>
       <ClassComponent/>
-      <FunctionComponent/>
+         </Col>
+         <Col md={4} className="mt-3">
+         <FunctionComponent />
+         </Col>
+         <Col md={4} className="mt-3">
+         <FunctionComponent />
          </Col>
         </Row>
       </Container>
+      
     </div>
   );
 }
