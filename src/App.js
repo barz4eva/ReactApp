@@ -7,10 +7,13 @@ import NavBar from './components/NavBar';
 
 
 function App() {
+  document.body.style.backgroundColor = "gray";
   return (
-    <div className="App">
-      <NavBar/>
+    <div bg="dark" className="App">
       <Container>
+      <NavBar />
+      </Container>
+      <Container fluid>
         <Row>
           <Col md={4} className="mt-3">
       <ClassComponent/>
