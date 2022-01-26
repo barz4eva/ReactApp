@@ -3,7 +3,7 @@ import { Alert } from "react-bootstrap";
 
 
 
-const Welcome = () => {
+const Welcome = props => {
     return <Alert variant="info" className="float-right">This is a function component</Alert>;
 }
 

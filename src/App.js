@@ -4,32 +4,60 @@ import './App.css';
 import ClassComponent from "./components/ClassComponent";
 import FunctionComponent from './components/FunctionComponent';
 import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Favourites from './pages/Favourites';
+import MostLiked from './pages/MostLiked';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+const routes = [
+  {
+    path: '/',
+    component: <Home/>,
+    exact: true,
+  },
+  {
+    path: 'favourites',
+    component: <Favourites/>,
+  },
+  {
+    path: 'mostLiked',
+    component: <MostLiked/>,
+  },
+]
 
 
 function App() {
+
+  const GetRoutes = () => {
+    return routes.map((route, index) => {
+      return <Route
+      key={index}
+       exact={route}
+        path={route.path}
+        element={route.component}>
+        
+      </Route>
+    })
+  }
+
   document.body.style.backgroundColor = "gray";
   return (
-    <div bg="dark" className="App">
-      <Container>
-      <NavBar />
-      </Container>
-      <Container fluid>
-        <Row>
-          <Col md={4} className="mt-3">
-      <ClassComponent/>
-      <ClassComponent/>
-      <ClassComponent/>
-         </Col>
-         <Col md={4} className="mt-3">
-         <FunctionComponent />
-         </Col>
-         <Col md={4} className="mt-3">
-         <FunctionComponent />
-         </Col>
-        </Row>
-      </Container>
-      
-    </div>
+      <Router>
+        <NavBar />
+        <Container>
+          <Row className='mt-5'>
+           <Routes>
+             {GetRoutes()}
+           </Routes>
+          </Row>
+        </Container>
+        
+      </Router>
   );
 }
 
