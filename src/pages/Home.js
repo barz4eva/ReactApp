@@ -13,6 +13,9 @@ const Home = props => {
                 <Col className="mt-4">
                 <Welcome />
                 </Col>
+                <Col className="mt-4">
+                <Welcome />
+                </Col>
             </Row>
         </Container>
 

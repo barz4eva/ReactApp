@@ -1,8 +1,6 @@
 
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import './App.css';
-import ClassComponent from "./components/ClassComponent";
-import FunctionComponent from './components/FunctionComponent';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Favourites from './pages/Favourites';
@@ -45,12 +43,13 @@ function App() {
     })
   }
 
-  document.body.style.backgroundColor = "gray";
   return (
       <Router>
-        <NavBar />
         <Container>
-          <Row className='mt-5'>
+        <NavBar />
+        </Container>
+        <Container fluid>
+          <Row className='mt-4'>
            <Routes>
              {GetRoutes()}
            </Routes>
