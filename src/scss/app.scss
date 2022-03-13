@@ -1,1 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+
+body, html {
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+.bg-image {
+  background-image: url("https://pixabay.com/get/g0cbe047e67b4b97698173af5153f16cc49614b7bd1876ed1f337477ec3a48515ef841e8c69e8744c96530d12a14ace4f7ab5aa0df777f819bf93d7cd384a4ceb_1280.jpg");
+  
+}

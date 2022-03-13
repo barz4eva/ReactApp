@@ -3,7 +3,6 @@ import Welcome from "../components/FunctionComponent";
 
 const Home = props => {
 
-    document.body.style.backgroundColor = "gray";
     return (
         <Container>
             <Row>

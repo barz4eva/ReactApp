@@ -1,6 +1,6 @@
 
 import { Container, Row } from 'react-bootstrap';
-import './App.css';
+import './scss/app.scss';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Favourites from './pages/Favourites';
@@ -45,6 +45,7 @@ function App() {
 
   return (
       <Router>
+        <div className='bg-image'></div>
         <Container>
         <NavBar />
         </Container>

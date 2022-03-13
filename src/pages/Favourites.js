@@ -1,15 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Alert } from "react-bootstrap";
+import { Container, Row, Col, Image, Alert } from "react-bootstrap";
 
 const Favourites = props => {
 
     const [movies, setMovies] = useState([]);
 
     const fetchMovies = () => {
-        axios.get('https://reactnative.dev/movies.json')
+        axios.get('https://pixabay.com/api/?key=25921303-3c86a1505c05e32f129f1fa9b&q=yellow+flowers&image_type=photo&pretty=true')
         .then(response => {
-            setMovies(response.data.movies);
+            setMovies(response.data.hits);
         })
     }
 
@@ -19,11 +19,14 @@ const Favourites = props => {
 
     const renderMovies = () => {
         return movies.map(movie => {
-            return <Alert  key={movie.id} variant="info" className="float-right">
-                {movie.title}
-            </Alert>;
-        })
-    }
+            return <Container fluid>
+                <Col className="mt-4">
+                <Image  key={movie.id} src={movie.webformatURL} />
+                </Col>
+        </Container>
+            
+        });
+            }
 
 
     return (
